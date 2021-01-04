@@ -12,7 +12,7 @@ include("Video.jl")
 include("Application.jl")
 include("Archive.jl")
 
-export Is, Match, IsExtensionSupported, IsMimeSupported
+export Is, matcher, is_extension_supported, is_mime_supported
 
 const FileTypes=(FileType.Images.Image,FileType.Audios.Audio,FileType.Fonts.Font,FileType.Videos.Video,FileType.Applications.Application,FileType.Archives.Archive)
 
@@ -52,7 +52,7 @@ end
     Returns:
         FileType.Type object 
 """
-function Match(filename::String)::FileType.Types 
+function matcher(filename::String)::FileType.Types 
     try
         if isfile(filename)
             f=open(filename)
@@ -82,7 +82,7 @@ end
         true if the file extension is supported.
         Otherwise false.
 """
-function IsExtensionSupported(ext::String)::Bool
+function is_extension_supported(ext::String)::Bool
     for kind in FileTypes
         for (key,value) in kind
             if key.extension==ext
@@ -104,7 +104,7 @@ end
         Otherwise false.
 """
 
-function IsMimeSupported(mime::String)::Bool
+function is_mime_supported(mime::String)::Bool
     for kind in FileTypes
         for (key,value) in kind
             if key.mime==mime

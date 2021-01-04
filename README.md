@@ -32,7 +32,7 @@ Take a look on [contribution](##Contribution)
 ```julia
   using FileType
 
-  julia> kind = Match("example.gif")
+  julia> kind = matcher("example.gif")
   FileType.Types("gif", "image/gif")
 
   julia> kind.extension
@@ -56,10 +56,10 @@ Take a look on [contribution](##Contribution)
 ```julia
   using FileType
 
-  julia> IsMimeSupported("image/jpeg")
+  julia> is_mime_supported("image/jpeg")
   true
 
-  julia> IsExtensionSupported("png")
+  julia> is_extension_supported("png")
   true
 
 ```

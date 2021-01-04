@@ -2,20 +2,20 @@ using FileType
 using Test: @testset, @test, @test_throws
 
 @testset "test_files_types" begin
-    @test Match("files/example.jpeg").extension == "jpg"
-    @test Match("files/example.gif").extension == "gif"
-    @test Match("files/example.webp").extension == "webp"
-    @test Match("files/example.tiff").extension == "tif"
-    @test Match("files/example.mp3").extension == "mp3"
-    @test Match("files/example.ttf").extension == "ttf"
-    @test Match("files/example.m4v").extension == "m4v"
-    @test Match("files/example.tar.gz").extension == "gz"
-    @test Match("files/example.wasm").extension == "wasm"
-    @test Match("files/example.dex").extension == "dex"
-    @test Match("files/example.dey").extension == "dey"
+    @test matcher("files/example.jpeg").extension == "jpg"
+    @test matcher("files/example.gif").extension == "gif"
+    @test matcher("files/example.webp").extension == "webp"
+    @test matcher("files/example.tiff").extension == "tif"
+    @test matcher("files/example.mp3").extension == "mp3"
+    @test matcher("files/example.ttf").extension == "ttf"
+    @test matcher("files/example.m4v").extension == "m4v"
+    @test matcher("files/example.tar.gz").extension == "gz"
+    @test matcher("files/example.wasm").extension == "wasm"
+    @test matcher("files/example.dex").extension == "dex"
+    @test matcher("files/example.dey").extension == "dey"
     @test Is(FileType.Images.Image,"files/example.png") == true
-    @test IsExtensionSupported("png") == true
-    @test IsMimeSupported("image/jpeg") == true
+    @test is_extension_supported("png") == true
+    @test is_mime_supported("image/jpeg") == true
     @test_throws ErrorException Is(FileType.Images.Image,"files")
 end 
 
