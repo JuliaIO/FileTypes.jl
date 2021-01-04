@@ -21,7 +21,7 @@ Small and dependency free [Julia](https://julialang.org/) package to infer file 
 ## General Info
 currently under developement.
 
-Take a look on [contribution](##contribution)
+Take a look on [contribution](##Contribution)
 
 
 
@@ -152,12 +152,12 @@ Take a look on [contribution](##contribution)
 - **dex** - `application/vnd.android.dex`
 - **dey** - `application/vnd.android.dey`
 
-## contribution
+## Contribution
 
-- Currently, the ``Is`` API takes a parameter as FileType.Images.The image which is a dictionary of all the supported image. I think it should be an (immutable)namedtuple as the custom filetype should be of unknown type only.    
+- Currently, the ``Is`` API takes a parameter as ``FileType.Images.Image`` which is a dictionary of all the supported image. I think it should be an (immutable)namedtuple as the custom filetype should be of unknown type only.    
 - There should be an API to add new custom Types.
 - Currently, Filetypes(publicly accessed) is a tuple that should be an Array as this library has to provide an API to add a new type, and that new type could we handled in ``Is`` API like FileType.Unknown.
-- The FileType.Images.Image should be FileType.Images
+- The ``FileType.Images.Image`` should be ``FileType.Images``
 - I am confused with implicit exception handling.
 - I have no idea about Julia naming convention.
 
