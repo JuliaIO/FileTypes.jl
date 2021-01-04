@@ -21,7 +21,7 @@ Small and dependency free [Julia](https://julialang.org/) package to infer file 
 ## General Info
 currently under developement.
 
-Take a look on [contribution](##Contribution)
+Take a look on [contribution](#Contribution)
 
 
 
