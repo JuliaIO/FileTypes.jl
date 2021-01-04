@@ -161,6 +161,30 @@ Take a look on [contribution](#Contribution)
 - I am confused with implicit exception handling.
 - I have no idea about Julia naming convention.
 
+## Benchmark
+
+system info:
+SMP Debian 5.8.7-1kali1 (2020-09-14) x86_64 GNU/Linux
+Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz
+
+```julia
+
+julia> @benchmark matcher("example.png")
+BenchmarkTools.Trial: 
+  memory estimate:  1.69 KiB
+  allocs estimate:  16
+  --------------
+  minimum time:     12.304 μs (0.00% GC)
+  median time:      12.859 μs (0.00% GC)
+  mean time:        14.708 μs (0.00% GC)
+  maximum time:     329.586 μs (0.00% GC)
+  --------------
+  samples:          10000
+  evals/sample:     1
+
+
+```
+
 ## License
 
 MIT - Prince Roshan
