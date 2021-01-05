@@ -15,7 +15,7 @@ using Test: @testset, @test, @test_throws
     @test matcher("files/example.dey").extension == "dey"
     @test Is(FileType.Images.Image,"files/example.png") == true
     @test is_extension_supported("png") == true
-    @test is_mime_supported("image/jpeg") == true
+    @test is_mime_supported(MIME("image/jpeg")) == true
     @test_throws ErrorException Is(FileType.Images.Image,"files")
 end 
 

@@ -3,13 +3,13 @@ module Videos
 
 using FileType
 
-TypeM4v  = FileType.Types("m4v", "video/x-m4v")
-TypeMov  = FileType.Types("mov", "video/quicktime")
-TypeAvi  = FileType.Types("avi", "video/x-msvideo")
-TypeWmv  = FileType.Types("wmv", "video/x-ms-wmv")
-TypeMpeg = FileType.Types("mpg", "video/mpeg")
-TypeFlv  = FileType.Types("flv", "video/x-flv")
-Type3gp  = FileType.Types("3gp", "video/3gpp")
+TypeM4v  = FileType.Types("m4v", MIME("video/x-m4v"))
+TypeMov  = FileType.Types("mov", MIME("video/quicktime"))
+TypeAvi  = FileType.Types("avi", MIME("video/x-msvideo"))
+TypeWmv  = FileType.Types("wmv", MIME("video/x-ms-wmv"))
+TypeMpeg = FileType.Types("mpg", MIME("video/mpeg"))
+TypeFlv  = FileType.Types("flv", MIME("video/x-flv"))
+Type3gp  = FileType.Types("3gp", MIME("video/3gpp"))
 
 function M4v(buf)::Bool
 	return length(buf) > 10 &&

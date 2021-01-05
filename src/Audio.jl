@@ -1,14 +1,14 @@
 module Audios
 
 using FileType
-TypeMidi = FileType.Types("mid", "audio/midi")
-TypeMp3  = FileType.Types("mp3", "audio/mpeg")
-TypeM4a  = FileType.Types("m4a", "audio/m4a")
-TypeOgg  = FileType.Types("ogg", "audio/ogg")
-TypeFlac = FileType.Types("flac", "audio/x-flac")
-TypeWav  = FileType.Types("wav", "audio/x-wav")
-TypeAmr  = FileType.Types("amr", "audio/amr")
-TypeAac  = FileType.Types("aac", "audio/aac")
+TypeMidi = FileType.Types("mid", MIME("audio/midi"))
+TypeMp3  = FileType.Types("mp3", MIME("audio/mpeg"))
+TypeM4a  = FileType.Types("m4a", MIME("audio/m4a"))
+TypeOgg  = FileType.Types("ogg", MIME("audio/ogg"))
+TypeFlac = FileType.Types("flac", MIME("audio/x-flac"))
+TypeWav  = FileType.Types("wav", MIME("audio/x-wav"))
+TypeAmr  = FileType.Types("amr", MIME("audio/amr"))
+TypeAac  = FileType.Types("aac", MIME("audio/aac"))
 
 function Midi(buf)::Bool
 	return length(buf) > 3 &&

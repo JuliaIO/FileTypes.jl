@@ -2,7 +2,7 @@ module FileType
 
 struct Types
     extension::String
-    mime::String
+    mime::MIME
 end
 
 include("Image.jl")
@@ -104,7 +104,7 @@ end
         Otherwise false.
 """
 
-function is_mime_supported(mime::String)::Bool
+function is_mime_supported(mime::MIME)::Bool
     for kind in FileTypes
         for (key,value) in kind
             if key.mime==mime

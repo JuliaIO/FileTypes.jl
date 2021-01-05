@@ -1,10 +1,10 @@
 module Fonts
 using FileType
 
-TypeWoff  = FileType.Types("woff", "application/font-woff")
-TypeWoff2 = FileType.Types("woff2", "application/font-woff")
-TypeTtf   = FileType.Types("ttf", "application/font-sfnt")
-TypeOtf   = FileType.Types("otf", "application/font-sfnt")
+TypeWoff  = FileType.Types("woff", MIME("application/font-woff"))
+TypeWoff2 = FileType.Types("woff2", MIME("application/font-woff"))
+TypeTtf   = FileType.Types("ttf", MIME("application/font-sfnt"))
+TypeOtf   = FileType.Types("otf", MIME("application/font-sfnt"))
 
 function Woff(buf)::Bool
 	return length(buf) > 7 &&

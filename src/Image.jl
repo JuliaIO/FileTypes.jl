@@ -2,18 +2,18 @@ module Images
 
 using FileType
 
-TypeJpeg     = FileType.Types("jpg", "image/jpeg")
-TypeJpeg2000 = FileType.Types("jp2", "image/jp2")
-TypePng      = FileType.Types("png", "image/png")
-TypeGif      = FileType.Types("gif", "image/gif")
-TypeWebp     = FileType.Types("webp", "image/webp")
-TypeCR2      = FileType.Types("cr2", "image/x-canon-cr2")
-TypeTiff     = FileType.Types("tif", "image/tiff")
-TypeBmp      = FileType.Types("bmp", "image/bmp")
-TypeJxr      = FileType.Types("jxr", "image/vnd.ms-photo")
-TypePsd      = FileType.Types("psd", "image/vnd.adobe.photoshop")
-TypeIco      = FileType.Types("ico", "image/vnd.microsoft.icon")
-TypeDwg      = FileType.Types("dwg", "image/vnd.dwg")
+TypeJpeg     = FileType.Types("jpg", MIME("image/jpeg"))
+TypeJpeg2000 = FileType.Types("jp2", MIME("image/jp2"))
+TypePng      = FileType.Types("png", MIME("image/png"))
+TypeGif      = FileType.Types("gif", MIME("image/gif"))
+TypeWebp     = FileType.Types("webp", MIME("image/webp"))
+TypeCR2      = FileType.Types("cr2", MIME("image/x-canon-cr2"))
+TypeTiff     = FileType.Types("tif", MIME("image/tiff"))
+TypeBmp      = FileType.Types("bmp", MIME("image/bmp"))
+TypeJxr      = FileType.Types("jxr", MIME("image/vnd.ms-photo"))
+TypePsd      = FileType.Types("psd", MIME("image/vnd.adobe.photoshop"))
+TypeIco      = FileType.Types("ico", MIME("image/vnd.microsoft.icon"))
+TypeDwg      = FileType.Types("dwg", MIME("image/vnd.dwg"))
 
 
 function Jpeg(buf)::Bool

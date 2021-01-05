@@ -3,9 +3,9 @@ module Applications
 
 using FileType
 
-TypeWasm = FileType.Types("wasm", "application/wasm")
-TypeDex  = FileType.Types("dex", "application/vnd.android.dex")
-TypeDey  = FileType.Types("dey", "application/vnd.android.dey")
+TypeWasm = FileType.Types("wasm", MIME("application/wasm"))
+TypeDex  = FileType.Types("dex", MIME("application/vnd.android.dex"))
+TypeDey  = FileType.Types("dey", MIME("application/vnd.android.dey"))
 
 # Wasm detects a Web Assembly 1.0 filetype.
 function Wasm(buf)::Bool
