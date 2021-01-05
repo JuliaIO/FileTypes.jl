@@ -51,7 +51,7 @@ Take a look on [contribution](#Contribution)
   true
 ```
 
-#### Add additional file type matchers
+#### additional checker function
 
 ```julia
   using FileType
