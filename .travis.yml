@@ -1,6 +1,8 @@
 language: julia
 notifications:
   email: false
+env:
+    - CODECOV_TOKEN='b4bfedd7-2289-4a87-8e52-f30cad27855e'
 julia:
   - 1.5
   - nightly
