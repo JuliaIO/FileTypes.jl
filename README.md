@@ -1,5 +1,7 @@
 Small and dependency free [Julia](https://julialang.org/) package to infer file and MIME type checking the [magic numbers](<https://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files>) signature.
 
+[![Build Status](https://travis-ci.org/Agent-Hellboy/FileType.jl.svg?branch=main)](https://travis-ci.org/Agent-Hellboy/FileType.jl)
+[![Coverage](https://codecov.io/gh/Agent-Hellboy/FileType.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/Agent-Hellboy/FileType.jl)
 
 ## Features
 
