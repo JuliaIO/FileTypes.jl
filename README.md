@@ -2,8 +2,8 @@
 
 Small and dependency free [Julia](https://julialang.org/) package to infer file and MIME type checking the [magic numbers](<https://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files>) signature.
 
-[![Build Status](https://travis-ci.org/Agent-Hellboy/FileType.jl.svg?branch=main)](https://travis-ci.org/Agent-Hellboy/FileType.jl)
-[![Coverage](https://codecov.io/gh/Agent-Hellboy/FileType.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/Agent-Hellboy/FileType.jl)
+[![Build Status](https://travis-ci.org/JuliaIO/FileType.jl.svg?branch=main)](https://travis-ci.org/JuliaIO/FileType.jl)
+[![Coverage](https://codecov.io/gh/JuliaIO/FileType.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/JuliaIO/FileType.jl)
 
 ## Features
 
@@ -156,8 +156,7 @@ Take a look on [contribution](#Contribution)
 - There should be an API to add new custom Types.
 - Currently, Filetypes(publicly accessed) is a tuple that should be an Array as this library has to provide an API to add a new type, and that new type could we handled in ``Is`` API like FileType.Unknown.
 - The ``FileType.Images.Image`` should be ``FileType.Images``
-- I am confused with implicit exception handling.
-- I have no idea about Julia naming convention.
+
 
 ## Benchmark
 
