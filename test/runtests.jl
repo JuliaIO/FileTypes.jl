@@ -1,4 +1,4 @@
-using FileType
+using FileTypes
 using Test: @testset, @test, @test_throws
 
 @testset "test_files_types" begin

@@ -1,14 +1,14 @@
 module Audios
+include("ABSType.jl")
 
-using FileType
-TypeMidi = FileType.Types("mid", MIME("audio/midi"))
-TypeMp3  = FileType.Types("mp3", MIME("audio/mpeg"))
-TypeM4a  = FileType.Types("m4a", MIME("audio/m4a"))
-TypeOgg  = FileType.Types("ogg", MIME("audio/ogg"))
-TypeFlac = FileType.Types("flac", MIME("audio/x-flac"))
-TypeWav  = FileType.Types("wav", MIME("audio/x-wav"))
-TypeAmr  = FileType.Types("amr", MIME("audio/amr"))
-TypeAac  = FileType.Types("aac", MIME("audio/aac"))
+TypeMidi = ABSType.Type("mid", MIME("audio/midi"))
+TypeMp3  = ABSType.Type("mp3", MIME("audio/mpeg"))
+TypeM4a  = ABSType.Type("m4a", MIME("audio/m4a"))
+TypeOgg  = ABSType.Type("ogg", MIME("audio/ogg"))
+TypeFlac = ABSType.Type("flac", MIME("audio/x-flac"))
+TypeWav  = ABSType.Type("wav", MIME("audio/x-wav"))
+TypeAmr  = ABSType.Type("amr", MIME("audio/amr"))
+TypeAac  = ABSType.Type("aac", MIME("audio/aac"))
 
 function Midi(buf)::Bool
 	return length(buf) > 3 &&

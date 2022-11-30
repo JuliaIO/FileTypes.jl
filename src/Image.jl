@@ -1,19 +1,19 @@
 module Images
+include("ABSType.jl")
 
-using FileType
 
-TypeJpeg     = FileType.Types("jpg", MIME("image/jpeg"))
-TypeJpeg2000 = FileType.Types("jp2", MIME("image/jp2"))
-TypePng      = FileType.Types("png", MIME("image/png"))
-TypeGif      = FileType.Types("gif", MIME("image/gif"))
-TypeWebp     = FileType.Types("webp", MIME("image/webp"))
-TypeCR2      = FileType.Types("cr2", MIME("image/x-canon-cr2"))
-TypeTiff     = FileType.Types("tif", MIME("image/tiff"))
-TypeBmp      = FileType.Types("bmp", MIME("image/bmp"))
-TypeJxr      = FileType.Types("jxr", MIME("image/vnd.ms-photo"))
-TypePsd      = FileType.Types("psd", MIME("image/vnd.adobe.photoshop"))
-TypeIco      = FileType.Types("ico", MIME("image/vnd.microsoft.icon"))
-TypeDwg      = FileType.Types("dwg", MIME("image/vnd.dwg"))
+TypeJpeg     = ABSType.Type("jpg", MIME("image/jpeg"))
+TypeJpeg2000 = ABSType.Type("jp2", MIME("image/jp2"))
+TypePng      = ABSType.Type("png", MIME("image/png"))
+TypeGif      = ABSType.Type("gif", MIME("image/gif"))
+TypeWebp     = ABSType.Type("webp", MIME("image/webp"))
+TypeCR2      = ABSType.Type("cr2", MIME("image/x-canon-cr2"))
+TypeTiff     = ABSType.Type("tif", MIME("image/tiff"))
+TypeBmp      = ABSType.Type("bmp", MIME("image/bmp"))
+TypeJxr      = ABSType.Type("jxr", MIME("image/vnd.ms-photo"))
+TypePsd      = ABSType.Type("psd", MIME("image/vnd.adobe.photoshop"))
+TypeIco      = ABSType.Type("ico", MIME("image/vnd.microsoft.icon"))
+TypeDwg      = ABSType.Type("dwg", MIME("image/vnd.dwg"))
 
 
 function Jpeg(buf)::Bool
@@ -118,5 +118,6 @@ Image = Dict(
 	TypeIco      => Ico,
 	TypeDwg      => Dwg,
 )
+
 
 end

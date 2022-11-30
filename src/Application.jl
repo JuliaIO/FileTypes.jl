@@ -1,11 +1,11 @@
 module Applications
 
+include("ABSType.jl")
 
-using FileType
 
-TypeWasm = FileType.Types("wasm", MIME("application/wasm"))
-TypeDex  = FileType.Types("dex", MIME("application/vnd.android.dex"))
-TypeDey  = FileType.Types("dey", MIME("application/vnd.android.dey"))
+TypeWasm = ABSType.Type("wasm", MIME("application/wasm"))
+TypeDex  = ABSType.Type("dex", MIME("application/vnd.android.dex"))
+TypeDey  = ABSType.Type("dey", MIME("application/vnd.android.dey"))
 
 # Wasm detects a Web Assembly 1.0 filetype.
 function Wasm(buf)::Bool

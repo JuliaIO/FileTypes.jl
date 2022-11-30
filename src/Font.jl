@@ -1,10 +1,12 @@
 module Fonts
-using FileType
 
-TypeWoff  = FileType.Types("woff", MIME("application/font-woff"))
-TypeWoff2 = FileType.Types("woff2", MIME("application/font-woff"))
-TypeTtf   = FileType.Types("ttf", MIME("application/font-sfnt"))
-TypeOtf   = FileType.Types("otf", MIME("application/font-sfnt"))
+include("ABSType.jl")
+
+
+TypeWoff  = ABSType.Type("woff", MIME("application/font-woff"))
+TypeWoff2 = ABSType.Type("woff2", MIME("application/font-woff"))
+TypeTtf   = ABSType.Type("ttf", MIME("application/font-sfnt"))
+TypeOtf   = ABSType.Type("otf", MIME("application/font-sfnt"))
 
 function Woff(buf)::Bool
 	return length(buf) > 7 &&
@@ -36,7 +38,7 @@ function Otf(buf)::Bool
 		buf[5] == 0x00
 end
 
-Font = Dict(
+Font= Dict(
 	TypeWoff =>  Woff,
 	TypeWoff2=>  Woff2,
 	TypeTtf  =>  Ttf,

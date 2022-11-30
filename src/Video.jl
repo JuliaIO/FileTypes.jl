@@ -1,15 +1,15 @@
 module Videos
 
+include("ABSType.jl")
 
-using FileType
 
-TypeM4v  = FileType.Types("m4v", MIME("video/x-m4v"))
-TypeMov  = FileType.Types("mov", MIME("video/quicktime"))
-TypeAvi  = FileType.Types("avi", MIME("video/x-msvideo"))
-TypeWmv  = FileType.Types("wmv", MIME("video/x-ms-wmv"))
-TypeMpeg = FileType.Types("mpg", MIME("video/mpeg"))
-TypeFlv  = FileType.Types("flv", MIME("video/x-flv"))
-Type3gp  = FileType.Types("3gp", MIME("video/3gpp"))
+TypeM4v  = ABSType.Type("m4v", MIME("video/x-m4v"))
+TypeMov  = ABSType.Type("mov", MIME("video/quicktime"))
+TypeAvi  = ABSType.Type("avi", MIME("video/x-msvideo"))
+TypeWmv  = ABSType.Type("wmv", MIME("video/x-ms-wmv"))
+TypeMpeg = ABSType.Type("mpg", MIME("video/mpeg"))
+TypeFlv  = ABSType.Type("flv", MIME("video/x-flv"))
+Type3gp  = ABSType.Type("3gp", MIME("video/3gpp"))
 
 function M4v(buf)::Bool
 	return length(buf) > 10 &&
