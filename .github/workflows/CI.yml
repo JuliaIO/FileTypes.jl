@@ -54,8 +54,8 @@ jobs:
           julia --project=docs -e '
             using Documenter: DocMeta, doctest
             using FileType
-            DocMeta.setdocmeta!(FileType, :DocTestSetup, :(using FileType); recursive=true)
-            doctest(FileType)'
+            DocMeta.setdocmeta!(FileTypes, :DocTestSetup, :(using FileTypes); recursive=true)
+            doctest(FileTypes)'
       - run: julia --project=docs docs/make.jl
         env:
           JULIA_PKG_SERVER: ""
