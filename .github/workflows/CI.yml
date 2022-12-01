@@ -53,7 +53,7 @@ jobs:
       - run: |
           julia --project=docs -e '
             using Documenter: DocMeta, doctest
-            using FileType
+            using FileTypes
             DocMeta.setdocmeta!(FileTypes, :DocTestSetup, :(using FileTypes); recursive=true)
             doctest(FileTypes)'
       - run: julia --project=docs docs/make.jl
