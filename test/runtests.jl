@@ -13,9 +13,9 @@ using Test: @testset, @test, @test_throws
     @test matcher("files/example.wasm").extension == "wasm"
     @test matcher("files/example.dex").extension == "dex"
     @test matcher("files/example.dey").extension == "dey"
-    @test Is(FileType.Images.Image,"files/example.png") == true
+    @test Is(FileType.Image,"files/example.png") == true
     @test is_extension_supported("png") == true
     @test is_mime_supported(MIME("image/jpeg")) == true
-    @test_throws ErrorException Is(FileType.Images.Image,"files")
+    @test_throws ErrorException Is(FileType.Image,"files")
 end 
 

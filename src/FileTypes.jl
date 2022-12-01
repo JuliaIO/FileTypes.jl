@@ -4,7 +4,7 @@ include("FileType.jl")
 
 export Is, matcher, is_extension_supported, is_mime_supported
 
-const Types=(FileType.Images.Image,FileType.Audios.Audio,FileType.Fonts.Font,FileType.Videos.Video,FileType.Applications.Application,FileType.Archives.Archive)
+const Types=(FileType.Image,FileType.Audio,FileType.Font,FileType.Video,FileType.Application,FileType.Archive)
 
 """
     API to check if it is of given type or not.
@@ -42,7 +42,7 @@ end
     Returns:
         FileType.Type object 
 """
-function matcher(filename::String)::FileType.ABSType.Type
+function matcher(filename::String)::FileType.Type
     try
         if isfile(filename)
             f=open(filename)

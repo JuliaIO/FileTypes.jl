@@ -28,7 +28,7 @@ Take a look on [contribution](#Contribution)
 #### Simple file type checking
 
 ```julia
-  using FileType
+  using FileTypes
 
   julia> kind = matcher("example.gif")
   FileType.Types("gif", "image/gif")
@@ -44,21 +44,46 @@ Take a look on [contribution](#Contribution)
 #### Check type class
 
 ```julia
-  using FileType
-  julia> Is(FileType.Images.Image,"example.gif")
+  using FileTypes
+  julia> Is(FileType.Image,"example.gif")
   true
 ```
 
 #### additional checker function
 
 ```julia
-  using FileType
+  using FileTypes
 
   julia> is_mime_supported("image/jpeg")
   true
 
   julia> is_extension_supported("png")
   true
+
+```
+
+#### You can see the supported file type using 
+
+```julia
+  julia> using FileTypes
+
+  julia> FileType
+  FileTypes.FileType
+
+  julia> FileType.Image
+  Dict{FileTypes.FileType.Type, Function} with 12 entries:
+    Type("gif", MIME type image/gif)                 => Gif
+    Type("cr2", MIME type image/x-canon-cr2)         => CR2
+    Type("jp2", MIME type image/jp2)                 => Jpeg2000
+    Type("psd", MIME type image/vnd.adobe.photoshop) => Psd
+    Type("bmp", MIME type image/bmp)                 => Bmp
+    Type("tif", MIME type image/tiff)                => Tiff
+    Type("jpg", MIME type image/jpeg)                => Jpeg
+    Type("ico", MIME type image/vnd.microsoft.icon)  => Ico
+    Type("png", MIME type image/png)                 => Png
+    Type("webp", MIME type image/webp)               => Webp
+    Type("jxr", MIME type image/vnd.ms-photo)        => Jxr
+    Type("dwg", MIME type image/vnd.dwg)             => Dwg
 
 ```
 
