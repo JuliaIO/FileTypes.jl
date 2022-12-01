@@ -3,7 +3,7 @@
 Small and dependency free [Julia](https://julialang.org/) package to infer file and MIME type checking the [magic numbers](<https://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files>) signature.
 
 [![Build Status](https://github.com/JuliaIO/FileTypes.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/JuliaIO/FileTypes.jl)
-[![Coverage](https://codecov.io/gh/JuliaIO/FileType.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/JuliaIO/FileType.jl)
+[![Coverage](https://codecov.io/gh/JuliaIO/FileTypes.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/JuliaIO/FileTypes.jl)
 
 ## Features
 
