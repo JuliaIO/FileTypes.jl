@@ -1,18 +1,18 @@
 # FileType.jl
 
-Documentation for FileType.jl
+Documentation for FileTypes.jl
 
 
 # Documentation
 
 ```@meta
-CurrentModule = FileType
+CurrentModule = FileTypes
 DocTestSetup = quote
-    using FileType
+    using FileTypes
 end
 ```
 
 ```@autodocs
-Modules = [FileType]
+Modules = [FileTypes]
 ```
 
