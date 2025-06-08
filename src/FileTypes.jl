@@ -40,9 +40,9 @@ end
     Args:
         filename (String) i.e filepath 
     Returns:
-        FileType.Type object 
+        FileType.Type object or nothing if the file is not recognized
 """
-function matcher(filename::String)::FileType.Type
+function matcher(filename::String)::Union{FileType.Type, Nothing}
     try
         if isfile(filename)
             f=open(filename)
@@ -55,6 +55,7 @@ function matcher(filename::String)::FileType.Type
                     end
                 end
             end
+            return nothing
         else
             throw(error("file not found"))
         end
